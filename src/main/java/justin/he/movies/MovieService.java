@@ -14,10 +14,12 @@ public class MovieService {
     private MovieRepository movieRepository;
 
     public List<Movie> allMovies(){
+
         return movieRepository.findAll();
     }
 
     public Optional<Movie> singleMovie(String id) {
+
         return movieRepository.findMovieByImdbId(id);
     }
 }
